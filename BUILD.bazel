@@ -1,0 +1,6 @@
+load("@hello//:ver.bzl", "VERSION")
+genrule(
+    name = "foo",
+    outs = ["foo.h"],
+    cmd = "echo {} > \"$@\"".format(VERSION),
+)
